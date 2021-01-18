@@ -1,0 +1,193 @@
+*{
+  margin:0;
+  padding:0;
+  
+}
+.start{
+   background:black;
+   height:100vh;
+   display:flex;
+   align-items:center;
+   justify-content:space-around;
+   flex-direction:column;
+}
+
+.start h1{
+  color:white;
+  animation:flare 3s linear infinite;
+  font-size:38px;
+  margin-top:-10px;
+}
+.start p {
+  color:white;
+  font-family:Courier;
+  font-size:.8em;
+}
+
+.start .logo{
+   color:transparent;
+   font-size:6em;
+   background:linear-gradient(orange,white);
+   -webkit-background-clip:text;
+   background-clip:text;
+
+}
+
+@keyframes flare{
+  0%{text-shadow:0 0 3px 2px white;}
+  50%{text-shadow:0 0 20px white,0 0 36px white;}
+  100%{text-shadow:0 0 3px 2px white;}
+}
+
+@keyframes load{
+ 0%{transform:rotate(0deg);}
+ 100%{transform:rotate(360deg);}
+
+}
+
+.loader{
+  width:30px;
+  height:30px;
+  border-radius:100%;
+  position:relative;
+  color:white;
+  text-align:center;
+}
+
+.loader:after{
+  position:absolute;
+  top:0;
+  left:0;
+  width:30px;
+  height:30px;
+  border:3px solid transparent;
+  border-left:3px solid orange;
+  border-top:3px solid orange;
+  content:"";
+  border-radius:100%;
+  animation:load 1s linear infinite;
+}
+
+
+.droid-enter-active, .droid-leave-active {
+  transition: all .5s;
+}
+
+.droid-enter{
+  opacity:1;
+}
+
+.droid-leave-to {
+  opacity:0;
+}
+
+.notif{
+  width:100%;
+  height:10vh;
+  background:grey;
+  background:black;
+  display:flex;
+  justify-content:space-between;
+  color:white;
+  align-items:center;
+  
+}
+
+.time{
+ color:white;
+ font-size:14px;
+ margin-right:8px;
+}
+.droidM{
+width:100%;
+height:90vh;
+background-image:url(back.jpg);
+background-position:center;
+background-size:cover;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.droidM button{
+    position:absolute;
+    bottom:4px;
+    font-size:20px;
+    border-radius:100%;
+    width:40px;
+    height:40px;
+    border:1px solid transparent;
+    color:white;
+    background:transparent;
+    outline:none;
+}
+
+.htime{
+  font-size:30px;
+  color:white;
+  background:rgba(0,0,0,0.6);
+  border-radius:20px;
+  padding:5px;
+  
+}
+.appmenu{
+  position:fixed;
+  width:100%;
+  height:100vh;
+  background:rgba(0,0,0,0.5);
+  filter:blur(5);
+  margin:0;
+  top:47px;
+}
+.menu-nav{
+width:100%;
+height:10vh;
+background:rgba(0,0,0,0.6);
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.menu-nav button{
+  width:30px;
+  height:30px;
+  font-size:22px;
+  color:green;
+  background:none;
+  border:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  outline:none;
+}
+
+
+.menu-enter-active, .menu-leave-active {
+  transition: all .5s;
+}
+
+.menu-enter{
+  transform:translateY(100%);
+}
+
+.menu-leave-to {
+  transform:translateY(100%);
+  
+}
+
+.appItem{
+  padding:10px;
+  color:white;
+  height:25px;
+  margin:4px;
+  background:rgba(0,0,0,0.4);
+}
+.appItem i{
+  margin-right:6px;
+  font-size:20px;
+}
+.apps{
+ overflow:scroll;
+ height:80vh;
+ 
+}
